@@ -18,34 +18,37 @@ from urllib.request import urlopen, Request
 
 # constants
 BASE_URL = "https://www.domain.com.au"
-N_PAGES = range(1, 5) # update this to your liking
+N_PAGES = range(1, 51)  # Number of pages to scrape
+BEDROOM_COUNTS = [1, 2, 3, 4, 5]  # Bedroom counts to filter by
 
 # begin code
 url_links = []
 property_metadata = defaultdict(dict)
 
 # generate list of urls to visit
-for page in N_PAGES:
-    url = BASE_URL + f"/rent/melbourne-region-vic/?sort=price-desc&page={page}"
-    print(f"Visiting {url}")
-    bs_object = BeautifulSoup(urlopen(Request(url, headers={'User-Agent':"PostmanRuntime/7.6.0"})), "lxml")
+for bedroom_count in BEDROOM_COUNTS:
+    for page in N_PAGES:
+        url = BASE_URL + f"/rent/melbourne-region-vic?/bedrooms={bedroom_count}&sort=price-desc&page={page}"
+        print(f"Visiting {url}")
+        bs_object = BeautifulSoup(urlopen(Request(url, headers={'User-Agent': "PostmanRuntime/7.6.0"})), "lxml")
 
-    # find the unordered list (ul) elements which are the results, then
-    # find all href (a) tags that are from the base_url website.
-    index_links = bs_object \
-        .find(
-            "ul",
-            {"data-testid": "results"}
-        ) \
-        .findAll(
-            "a",
-            href=re.compile(f"{BASE_URL}/*") # the `*` denotes wildcard any
-        )
+        # find the unordered list (ul) elements which are the results, then
+        # find all href (a) tags that are from the base_url website.
+        index_links = bs_object \
+            .find(
+                "ul",
+                {"data-testid": "results"}
+            ) \
+            .findAll(
+                "a",
+                href=re.compile(f"{BASE_URL}/*")  # the `*` denotes wildcard any
+            )
 
-    for link in index_links:
-        # if its a property address, add it to the list
-        if 'address' in link['class']:
-            url_links.append(link['href'])
+        for link in index_links:
+            # if it's a property address, add it to the list
+            if 'address' in link['class']:
+                url_links.append(link['href'])
+
 
 # for each url, scrape some basic metadata
 pbar = tqdm(url_links[1:])
@@ -92,5 +95,5 @@ for property_url in pbar:
     pbar.set_description(f"{(success_count/total_count * 100):.0f}% successful")
 
 # output to example json in data/raw/
-with open('../data/raw/example.json', 'w') as f:
+with open('./data/raw/domaindata.json', 'w') as f:
     dump(property_metadata, f)
