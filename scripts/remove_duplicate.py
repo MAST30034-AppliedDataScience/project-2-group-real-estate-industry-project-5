@@ -53,10 +53,8 @@ for key, entry in data.items():
             unique_addresses.add(address)
             cleaned_data[key] = entry
 
-# Track the number of cleaned entries
 cleaned_count = len(cleaned_data)
 
-# Calculate how many entries were removed
 entries_removed = original_count - cleaned_count
 
 os.makedirs('./data/curated', exist_ok=True)
