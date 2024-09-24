@@ -13,7 +13,7 @@ grouped_avg_properties = properties_updated_df.groupby('SA2_NAME21').agg({
     'Distance (km)': 'mean',  # Distance to station
     'School Distance (km)': 'mean',  # Distance to school
     'Distance to Closest Shopping Center (km)': 'mean',  # Distance to shopping center
-    'Price': 'mean'  # Average price
+    'Price': 'median'  # Median price
 }).reset_index()
 
 
