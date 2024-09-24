@@ -4,7 +4,9 @@ For the data part:
 
 (data/raw/dv296-schoollocations2020.csv):Download from https://discover.data.vic.gov.au/dataset/school-locations-2020
 
+(data/raw/shopping_centers_coordinates.csv): Manually made from wikipedia, https://en.wikipedia.org/wiki/List_of_largest_shopping_centres_in_Australia
 
+(<data/raw/Moving annual rent by suburb - March quarter 2023.xlsx>): Download from provided link: https://www.dffh.vic.gov.au/moving-annual-rents-suburb-march-quarter-2023-excel
 
 For the scrape part:
 (scripts/scrape_1b.py)(scripts/scrape_2b.py)(scripts/scrape_3b.py)(scripts/scrape_4b.py)(scripts/scrape_5b.py)(scripts/merge_data.py): Scrape the data from Domain and merge them together.
