@@ -20,3 +20,14 @@ For the scripts part:
 (scripts/closest_station.py)(scripts/school_distance.py): Find the closest train station and closest school of the property.
 
 (scripts/SA2_district.py): Put the property into SA2 district.
+
+(scripts/model_arima_5_years.py)(scripts/model_arima.py): 5 Years and 3 years ARIMA model.
+
+(scripts/average.py): average distance.
+
+(scripts/score.py): Calculate the liveability score.
+
+For the plots part:
+(plots/increase_rate_arima.py) (plots/increase_rate_geo.py) (plots/increase_rate_historical.py): plots for increase rate arima model, and geo plot, and historical model.
+
+(plots/score_geo.py): liveability geospatial plot.
