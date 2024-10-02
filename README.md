@@ -8,7 +8,7 @@ For the data part:
 
 (<data/raw/Moving annual rent by suburb - March quarter 2023.xlsx>): Download from provided link: https://www.dffh.vic.gov.au/moving-annual-rents-suburb-march-quarter-2023-excel
 
-For the scrape part:
+For the scripts part:
 (scripts/scrape_1b.py)(scripts/scrape_2b.py)(scripts/scrape_3b.py)(scripts/scrape_4b.py)(scripts/scrape_5b.py)(scripts/merge_data.py): Scrape the data from Domain and merge them together.
 
 (scripts/remove_duplicate.py): Remove the exact same property, convert the different price(etc. per annual, per month..) to per week.
