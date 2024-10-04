@@ -5,7 +5,7 @@ import contextily as ctx
 
 # File paths
 shapefile_path = './data/raw/SA2_2021_AUST_SHP_GDA2020/SA2_2021_AUST_GDA2020.shp'
-liveability_scores_path = './data/curated/liveability_scores.csv'
+liveability_scores_path = './data/curated/liveability_scores_with_pca_weights.csv'
 
 # Load the shapefile with geometries
 gdf_with_geometry = gpd.read_file(shapefile_path)
