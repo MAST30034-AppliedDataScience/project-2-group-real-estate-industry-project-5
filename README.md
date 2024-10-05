@@ -43,10 +43,12 @@
 - **ARIMA Models**:
   - `scripts/model_arima_5_years.py`: ARIMA model to predict rent increases over 5 years.
   - `scripts/model_arima.py`: ARIMA model to predict rent increases over 3 years.
-
+  - `scripts/evaluation_metrics.py`: ARIMA model's evaluation metrics.
+  
 - **Averaging and Scoring**:
   - `scripts/average.py`: Calculates the average distances from properties to amenities.
   - `scripts/score.py`: Computes the liveability score for each property.
+
 
 ---
 
