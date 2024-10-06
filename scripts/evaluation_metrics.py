@@ -63,7 +63,14 @@ mse_overall = mean_squared_error(true_values, predicted_values)
 rmse_overall = np.sqrt(mse_overall)
 mape_overall = np.mean(np.abs((np.array(true_values) - np.array(predicted_values)) / np.array(true_values))) * 100
 
+# Calculate R-squared
+mean_true = np.mean(true_values)
+ss_total = np.sum((np.array(true_values) - mean_true) ** 2)
+ss_residual = np.sum((np.array(true_values) - np.array(predicted_values)) ** 2)
+r_squared = 1 - (ss_residual / ss_total)
+
 print(f"MAE: {mae_overall}")
 print(f"MSE: {mse_overall}")
 print(f"RMSE: {rmse_overall}")
 print(f"MAPE: {mape_overall}%")
+print(f"R-squared: {r_squared}")
