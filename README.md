@@ -29,6 +29,7 @@
 - **Data Cleaning**:
   - `scripts/remove_duplicate.py`: Removes duplicate properties and converts prices (e.g., per annum, per month) to weekly rates.
   - `scripts/clean.py`: Retains the relevant fields such as property name and price.
+  - `scripts/clean_hist_data.py`: Cleans historical rent data for consistency.
 
 - **Geocoding**:
   - `scripts/geocode_v1.py`: Converts property addresses into geographical coordinates.
@@ -36,6 +37,7 @@
 - **Proximity Calculations**:
   - `scripts/closest_station.py`: Identifies the closest train station to each property.
   - `scripts/school_distance.py`: Finds the nearest school for each property.
+  - `scripts/closest_shopping_center.py`: Calculates the distance to the closest shopping center for each property.
 
 - **SA2 District Assignment**:
   - `scripts/SA2_district.py`: Assigns properties to their respective SA2 districts.
@@ -43,12 +45,16 @@
 - **ARIMA Models**:
   - `scripts/model_arima_5_years.py`: ARIMA model to predict rent increases over 5 years.
   - `scripts/model_arima.py`: ARIMA model to predict rent increases over 3 years.
-  - `scripts/evaluation_metrics.py`: ARIMA model's evaluation metrics.
-  
+
+- **Model Evaluation**:
+  - `scripts/evaluation_metrics.py`: Provides metrics to evaluate the performance of ARIMA models.
+
 - **Averaging and Scoring**:
   - `scripts/average.py`: Calculates the average distances from properties to amenities.
   - `scripts/score.py`: Computes the liveability score for each property.
-
+  
+- **Correlation and Analysis**:
+  - `scripts/corr_income.py`: Correlates income data with rental data for better prediction accuracy.
 
 ---
 
@@ -61,6 +67,9 @@
 
 - **Liveability Score Plot**:
   - `plots/score_geo.py`: Geospatial plot showing liveability scores.
+
+- **Model Plots**:
+  - `plots/plot_for_model_notebook.py`: Script to generate plots for model results (LSTM and XGboost) in the notebook.
 
 ---
 
