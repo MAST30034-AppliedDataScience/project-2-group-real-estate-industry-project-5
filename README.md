@@ -80,3 +80,9 @@
 
 - **Final Deliverable Notebook**:
   - `notebooks/notebook_final.ipynb`: Final deliverable notebook for assessment.
+
+- **Data Loading and Cleaning**:
+  - `Load&Clean_Data.ipynb`: Notebook responsible for loading and cleaning the data.
+
+- **Random Forest Model**:
+  - `RF.ipynb`: Random Forest for feature selection.
