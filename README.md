@@ -86,3 +86,9 @@
 
 - **Random Forest Model**:
   - `RF.ipynb`: Random Forest for feature selection.
+
+---
+
+## Model
+
+  - `Model9.ipynb`: Contains the Random Forest and XGBoost models used in the project, although they were not part of the final result in the presentation.
